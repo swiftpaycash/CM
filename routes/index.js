@@ -108,32 +108,20 @@ router.get('/ether-pay', ensureAuthenticated, (req, res) =>
   })
 );
 
+router.get('/usdt-trc', ensureAuthenticated, (req, res) =>
+  res.render('trc', {
+    user: req.user
+  })
+);
 
-router.get('/litecoin-pay', ensureAuthenticated, (req, res) =>
-  res.render('litecoinpay', {
+router.get('/usdt-erc', ensureAuthenticated, (req, res) =>
+  res.render('erc', {
     user: req.user
   })
 );
 
 
-router.get('/binance-pay', ensureAuthenticated, (req, res) =>
-  res.render('binancepay', {
-    user: req.user
-  })
-);
 
-router.get('/busd-pay', ensureAuthenticated, (req, res) =>
-  res.render('busd', {
-    user: req.user
-  })
-);
-
-
-router.get('/usdt-pay', ensureAuthenticated, (req, res) =>
-  res.render('usdt', {
-    user: req.user
-  })
-);
 router.get('/ltc-pay', ensureAuthenticated, (req, res) =>
   res.render('ltc', {
     user: req.user
